@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> - Multi-Express</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+    nav a:hover { opacity: 0.8; }
+    .container {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      width: 100%;
+    }
+    .content {
+      background: white;
+      border-radius: 15px;
+      padding: 3rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    h1 { color: #667eea; margin-bottom: 1rem; }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Ana Sayfa</a>
+      <a href="/about">Hakkında</a>
+      <a href="http://localhost:<%= ports.user %>">User Panel</a>
+      <a href="http://localhost:<%= ports.admin %>">Admin Panel</a>
+      <a href="http://localhost:<%= ports.api %>/docs">API Docs</a>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <div class="content">
+      <%- body %>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Multi-Express Template | Generated at <%= timestamp %></p>
+  </footer>
+</body>
+</html>

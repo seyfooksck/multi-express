@@ -1,0 +1,37 @@
+<h1><%= title %></h1>
+<p style="font-size: 1.2rem; margin-bottom: 2rem;"><%= message %></p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+  <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
+    <h3 style="color: #667eea; margin-bottom: 0.5rem;">🏠 Home Module</h3>
+    <p style="color: #666;">Port: <%= ports.home %></p>
+    <a href="/" style="color: #667eea; text-decoration: none; font-weight: 500;">Ziyaret Et →</a>
+  </div>
+  
+  <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #10b981;">
+    <h3 style="color: #10b981; margin-bottom: 0.5rem;">👤 User Module</h3>
+    <p style="color: #666;">Port: <%= ports.user %></p>
+    <a href="http://localhost:<%= ports.user %>" style="color: #10b981; text-decoration: none; font-weight: 500;">Ziyaret Et →</a>
+  </div>
+  
+  <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #f59e0b;">
+    <h3 style="color: #f59e0b; margin-bottom: 0.5rem;">👑 Admin Module</h3>
+    <p style="color: #666;">Port: <%= ports.admin %></p>
+    <a href="http://localhost:<%= ports.admin %>" style="color: #f59e0b; text-decoration: none; font-weight: 500;">Ziyaret Et →</a>
+  </div>
+  
+  <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #ef4444;">
+    <h3 style="color: #ef4444; margin-bottom: 0.5rem;">🚀 API Module</h3>
+    <p style="color: #666;">Port: <%= ports.api %></p>
+    <a href="http://localhost:<%= ports.api %>/docs" style="color: #ef4444; text-decoration: none; font-weight: 500;">Dokümantasyon →</a>
+  </div>
+</div>
+
+<div style="margin-top: 3rem; padding: 1.5rem; background: #eff6ff; border-radius: 10px;">
+  <h3 style="color: #3b82f6; margin-bottom: 1rem;">📚 Hızlı Başlangıç</h3>
+  <ol style="line-height: 2; color: #334155;">
+    <li><code>npm install</code> - Bağımlılıkları yükle</li>
+    <li><code>npm start</code> - Tüm modülleri başlat</li>
+    <li>Veya ayrı ayrı: <code>npm run home</code>, <code>npm run user</code>, vb.</li>
+  </ol>
+</div>

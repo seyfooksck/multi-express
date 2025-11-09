@@ -1,0 +1,23 @@
+{
+  "name": "multi-express-template",
+  "version": "1.0.0",
+  "description": "Modular Express.js multi-port template with class-based controllers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "home": "node modules/home/server.js",
+    "user": "node modules/user/server.js",
+    "admin": "node modules/admin/server.js",
+    "api": "node modules/api/server.js"
+  },
+  "keywords": ["express", "multi-port", "modular", "template"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "express-ejs-layouts": "^2.5.1",
+    "dotenv": "^16.3.1"
+  }
+}
